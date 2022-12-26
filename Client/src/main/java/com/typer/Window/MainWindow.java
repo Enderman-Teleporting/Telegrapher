@@ -5,17 +5,22 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 import static com.typer.Window.Buttons.Exit;
+import static com.typer.Window.Buttons.HelpAndAuthorInfo;
 
 public class MainWindow {
     public static void showMain(){
+        Image icon=Toolkit.getDefaultToolkit().getImage(MainWindow.class.getResource("/pics/telepraph.jpg").getPath());
         Frame frame = new Frame();
+        frame.setIconImage(icon);
         frame.setTitle("Telegrapher");
         frame.setSize(800,600);
         frame.setLocation(500,250);
         frame.setBackground(Color.white);
+        frame.add(Exit(), BorderLayout.SOUTH);
+        frame.add(HelpAndAuthorInfo(),BorderLayout.EAST);
+        frame.add(Pic.mainPic(),BorderLayout.NORTH);
         frame.setVisible(true);
         frame.setResizable(true);
-        frame.add(Exit(), BorderLayout.SOUTH);
         frame.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {

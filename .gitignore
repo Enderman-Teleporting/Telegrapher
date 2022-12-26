@@ -31,3 +31,7 @@
 *.out
 *.app
 *.class
+*.lock
+*.bin
+*.jar
+*.MF

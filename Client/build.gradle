@@ -6,7 +6,7 @@ version '1.0-SNAPSHOT'
 
 jar {
     manifest {
-        attributes 'Main-Class': 'com.sdp.app.Main'
+        attributes 'Main-Class': 'com.typer.Main'
     }
 }
 
