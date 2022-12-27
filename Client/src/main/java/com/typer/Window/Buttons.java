@@ -17,7 +17,7 @@ public class Buttons {
     }
 
     public static Panel HelpAndAuthorInfo(){
-        Panel panel = new Panel();;
+        Panel panel = new Panel();
         Button help=new Button("Help");
         Button author=new Button("Author");
         help.setPreferredSize(new Dimension(50,50));
