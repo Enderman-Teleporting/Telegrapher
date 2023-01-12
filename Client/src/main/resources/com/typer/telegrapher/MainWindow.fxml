@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="649.0" prefWidth="600.0" scaleShape="false" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.typer.telegrapher.Windows.EventHandler">
+   <children>
+      <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@R-C.jpeg" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" prefHeight="93.0" prefWidth="496.0" text="Telegrapher" textAlignment="CENTER">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="55.0" />
+               </font>
+            </Label>
+         </children>
+      </FlowPane>
+      <FlowPane alignment="CENTER" prefHeight="156.0" prefWidth="633.0">
+         <children>
+            <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="205.0" text="IP" />
+            <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="208.0" text="Port" />
+            <TextField fx:id="IP" alignment="CENTER" />
+            <TextField fx:id="Port" alignment="CENTER" />
+            <FlowPane prefHeight="79.0" prefWidth="523.0">
+               <children>
+                  <FlowPane alignment="CENTER" prefHeight="30.0" prefWidth="631.0">
+                     <children>
+                        <Button fx:id="Connect" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onConnectClick" text="Connect" textAlignment="CENTER" />
+                     </children>
+                  </FlowPane>
+                  <Label fx:id="txtConnect" alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="634.0" textFill="RED" />
+               </children>
+            </FlowPane>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </FlowPane>
+      <FlowPane prefHeight="144.0" prefWidth="611.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="32.0" prefWidth="556.0" text="Try clicking the button below or type Space">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <FlowPane alignment="CENTER" prefHeight="67.0" prefWidth="560.0">
+               <children>
+                  <Button fx:id="msg" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onMsgClick" prefHeight="67.0" prefWidth="144.0" text="Message!">
+                     <font>
+                        <Font name="Times New Roman Italic" size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+            </FlowPane>
+            <Label fx:id="txtMsg" alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="556.0" textAlignment="CENTER" />
+         </children>
+      </FlowPane>
+      <FlowPane alignment="CENTER" prefHeight="130.0" prefWidth="600.0">
+         <children>
+            <Button fx:id="exit" mnemonicParsing="false" onAction="#onExitClick" prefHeight="86.0" prefWidth="113.0" text="Exit">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="AuthorInfo" mnemonicParsing="false" onAction="#onAuthorInfoClick" prefHeight="86.0" prefWidth="113.0" text="Author Info" textOverrun="CLIP">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="RepoLoc" mnemonicParsing="false" onAction="#onRepoLocationClick" prefHeight="86.0" prefWidth="113.0" text="Repo Location">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="License" mnemonicParsing="false" onAction="#onLicenseClick" prefHeight="86.0" prefWidth="113.0" text="LICENSE">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Button>
+         </children>
+      </FlowPane>
+   </children>
+</VBox>

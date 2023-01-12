@@ -7,4 +7,6 @@ module com.typer.telegrapher {
 
     opens com.typer.telegrapher to javafx.fxml;
     exports com.typer.telegrapher;
+    exports com.typer.telegrapher.Windows;
+    opens com.typer.telegrapher.Windows to javafx.fxml;
 }
