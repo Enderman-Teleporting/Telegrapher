@@ -1,8 +1,23 @@
+buildscript {
+
+
+    ext.kotlin_version = '1.6.10'
+
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath"org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+
+
+}
 plugins {
     id 'java'
     id 'application'
     id 'org.openjfx.javafxplugin' version '0.0.10'
     id 'org.beryx.jlink' version '2.24.1'
+    id 'org.jetbrains.kotlin.jvm' version "1.6.10"
 }
 
 group 'com.typer'

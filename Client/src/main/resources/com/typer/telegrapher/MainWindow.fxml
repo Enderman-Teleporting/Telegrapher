@@ -7,9 +7,9 @@
 <?import java.lang.*?>
 <?import javafx.scene.text.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="649.0" prefWidth="600.0" scaleShape="false" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.typer.telegrapher.Windows.EventHandler">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="649.0" prefWidth="600.0" scaleShape="false" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.typer.telegrapher.Windows.EventHandler">
    <children>
-      <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
+      <FlowPane alignment="CENTER" prefHeight="219.0" prefWidth="556.0">
          <children>
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -23,28 +23,32 @@
             </Label>
          </children>
       </FlowPane>
-      <FlowPane alignment="CENTER" prefHeight="156.0" prefWidth="633.0">
-         <children>
-            <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="205.0" text="IP" />
-            <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="208.0" text="Port" />
-            <TextField fx:id="IP" alignment="CENTER" />
-            <TextField fx:id="Port" alignment="CENTER" />
-            <FlowPane prefHeight="79.0" prefWidth="523.0">
-               <children>
-                  <FlowPane alignment="CENTER" prefHeight="30.0" prefWidth="631.0">
-                     <children>
-                        <Button fx:id="Connect" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onConnectClick" text="Connect" textAlignment="CENTER" />
-                     </children>
-                  </FlowPane>
-                  <Label fx:id="txtConnect" alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="634.0" textFill="RED" />
-               </children>
-            </FlowPane>
-         </children>
+      <FlowPane alignment="CENTER" layoutY="229.0" prefHeight="156.0" prefWidth="550.0">
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
+         <children>
+            <AnchorPane prefHeight="129.0" prefWidth="467.0">
+               <children>
+                  <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="316.0" prefHeight="20.0" prefWidth="208.0" text="Port" />
+                  <TextField fx:id="Port" alignment="CENTER" layoutX="347.0" layoutY="20.0" />
+                  <TextField fx:id="IP" alignment="CENTER" layoutX="127.0" layoutY="20.0" />
+                  <FlowPane layoutY="50.0" prefHeight="79.0" prefWidth="523.0">
+                     <children>
+                        <FlowPane alignment="CENTER" prefHeight="30.0" prefWidth="631.0">
+                           <children>
+                              <Button fx:id="Connect" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onConnectClick" text="Connect" textAlignment="CENTER" />
+                           </children>
+                        </FlowPane>
+                        <Label fx:id="txtConnect" alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="634.0" textFill="RED" />
+                     </children>
+                  </FlowPane>
+                  <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="111.0" prefHeight="20.0" prefWidth="205.0" text="IP" />
+               </children>
+            </AnchorPane>
+         </children>
       </FlowPane>
-      <FlowPane prefHeight="144.0" prefWidth="611.0">
+      <FlowPane layoutY="402.0" prefHeight="144.0" prefWidth="611.0">
          <children>
             <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="32.0" prefWidth="556.0" text="Try clicking the button below or type Space">
                <font>
@@ -63,7 +67,7 @@
             <Label fx:id="txtMsg" alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="556.0" textAlignment="CENTER" />
          </children>
       </FlowPane>
-      <FlowPane alignment="CENTER" prefHeight="130.0" prefWidth="600.0">
+      <FlowPane alignment="CENTER" layoutX="-16.0" layoutY="522.0" prefHeight="130.0" prefWidth="600.0">
          <children>
             <Button fx:id="exit" mnemonicParsing="false" onAction="#onExitClick" prefHeight="86.0" prefWidth="113.0" text="Exit">
                <font>
@@ -85,7 +89,12 @@
                   <Font size="19.0" />
                </font>
             </Button>
+            <Button fx:id="License1" mnemonicParsing="false" onAction="#onLicenseClick" prefHeight="86.0" prefWidth="113.0" text="Settings">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Button>
          </children>
       </FlowPane>
    </children>
-</VBox>
+</AnchorPane>
