@@ -8,31 +8,31 @@ import javafx.scene.control.TextField
 
 class EventHandler {
     @FXML
-    private val msg: Button? = null
+    private var msg: Button? = null
 
     @FXML
-    private val exit: Button? = null
+    private var exit: Button? = null
 
     @FXML
-    private val txtMsg: Label? = null
+    private var txtMsg: Label?=null
 
     @FXML
-    private val Port: TextField? = null
+    private var Port: TextField?=null
 
     @FXML
-    private val Connect: Button? = null
+    private var Connect: Button? = null
 
     @FXML
-    private val RepoLoc: Button? = null
+    private var RepoLoc: Button? = null
 
     @FXML
-    private val License: Button? = null
+    private var License: Button? = null
 
     @FXML
-    private val AuthorInfo: Button? = null
+    private var AuthorInfo: Button? = null
 
     @FXML
-    private val txtConnect: Label? = null
+    private var txtConnect: Label? = null
     @FXML
     fun onConnectClick(event: ActionEvent?) {
     }
