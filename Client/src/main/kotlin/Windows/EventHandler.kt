@@ -1,4 +1,4 @@
-package com.typer.telegrapher.Windows
+package Windows
 
 import javafx.event.ActionEvent
 import javafx.fxml.FXML
