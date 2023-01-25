@@ -7,94 +7,144 @@
 <?import java.lang.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="649.0" prefWidth="600.0" scaleShape="false" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Windows.EventHandler">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Windows.EventHandler">
    <children>
-      <FlowPane alignment="CENTER" prefHeight="219.0" prefWidth="556.0">
+      <AnchorPane fx:id="Login_Page" layoutY="7.0" prefHeight="386.0" prefWidth="600.0" visible="false">
          <children>
-            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+            <TextField fx:id="Login_Callsign" layoutX="199.0" layoutY="135.0" />
+            <TextField fx:id="Login_Pwd" layoutX="199.0" layoutY="234.0" />
+            <Text layoutX="199.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" textAlignment="CENTER" wrappingWidth="202.0">
+               <font>
+                  <Font size="49.0" />
+               </font>
+            </Text>
+            <Text layoutX="116.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Callsign" wrappingWidth="69.30029296875" />
+            <Text layoutX="116.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+            <Text layoutX="230.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OR" />
+            <Button fx:id="Register" layoutX="300.0" layoutY="336.0" mnemonicParsing="false" onAction="#gotoregister" text="Register" />
+            <Button fx:id="Login" layoutX="252.0" layoutY="274.0" mnemonicParsing="false" onAction="#doLogin" prefHeight="42.0" prefWidth="97.0" text="Login" />
+            <Text fx:id="WarnCallsignLog" fill="RED" layoutX="413.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No such callsign found! " visible="false" />
+            <Text fx:id="WarnPwdLog" fill="RED" layoutX="413.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wrong Password!" visible="false" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="Reg_Page" prefHeight="400.0" prefWidth="606.0" visible="false">
+         <children>
+            <Text layoutX="147.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register" textAlignment="CENTER" wrappingWidth="311.30029296875">
+               <font>
+                  <Font size="54.0" />
+               </font>
+            </Text>
+            <TextField fx:id="CallsignReg" layoutX="202.0" layoutY="107.0" />
+            <TextField fx:id="Password1st" layoutX="202.0" layoutY="185.0" />
+            <TextField fx:id="Password2nd" layoutX="202.0" layoutY="261.0" />
+            <Text layoutX="132.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Callsign" />
+            <Text layoutX="126.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+            <Text layoutX="67.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirm Password" />
+            <Text layoutX="77.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Callsign should start with two letters and it is made up of 6 letters or numbers ">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Text>
+            <Text fx:id="WarnCallsignReg" fill="RED" layoutX="428.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid callsign!" visible="false" />
+            <Text fx:id="PwdDoNotMatchReg" fill="RED" layoutX="414.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password doesn't match!" visible="false" />
+            <Button fx:id="New_Account" layoutX="255.0" layoutY="322.0" mnemonicParsing="false" onAction="#doReg" prefHeight="42.0" prefWidth="97.0" text="Register" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="Main_Page" prefHeight="400.0" prefWidth="600.0" visible="false">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="199.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@R-C.jpeg" />
                </image>
             </ImageView>
-            <Label alignment="CENTER" prefHeight="93.0" prefWidth="496.0" text="Telegrapher" textAlignment="CENTER">
+            <Label alignment="CENTER" layoutX="175.0" layoutY="132.0" prefHeight="93.0" prefWidth="248.0" text="Telegrapher" textAlignment="CENTER">
                <font>
-                  <Font name="Times New Roman Bold Italic" size="55.0" />
+                  <Font name="Times New Roman Bold Italic" size="43.0" />
                </font>
             </Label>
+            <TextField fx:id="ip" layoutX="98.0" layoutY="238.0" />
+            <TextField fx:id="port" layoutX="300.0" layoutY="238.0" />
+            <Text layoutX="184.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IP" />
+            <Text layoutX="384.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Port" textAlignment="CENTER" />
+            <MenuBar prefHeight="32.0" prefWidth="600.0">
+              <menus>
+                <Menu fx:id="Author" mnemonicParsing="false" onAction="#author" text="Author Info">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu fx:id="Repo" mnemonicParsing="false" onAction="#repo" text="Repository">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu fx:id="Settings" mnemonicParsing="false" onAction="#settings" text="Settings">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+                  <Menu fx:id="Switch_Account" mnemonicParsing="false" onAction="#switch_account" text="Switch Account">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Action 1" />
+                    </items>
+                  </Menu>
+                  <Menu fx:id="Exit" mnemonicParsing="false" onAction="#exit" text="Exit">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Action 1" />
+                    </items>
+                  </Menu>
+              </menus>
+            </MenuBar>
+            <Button layoutX="260.0" layoutY="279.0" mnemonicParsing="false" onAction="#connect" text="Connect" />
+            <Text fill="RED" layoutX="98.0" layoutY="342.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$ErrorInfo" visible="false" />
          </children>
-      </FlowPane>
-      <FlowPane alignment="CENTER" layoutY="229.0" prefHeight="156.0" prefWidth="550.0">
-         <opaqueInsets>
-            <Insets />
-         </opaqueInsets>
+      </AnchorPane>
+      <AnchorPane prefHeight="400.0" prefWidth="606.0" visible="false">
          <children>
-            <AnchorPane prefHeight="129.0" prefWidth="467.0">
-               <children>
-                  <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="316.0" prefHeight="20.0" prefWidth="208.0" text="Port" />
-                  <TextField fx:id="Port" alignment="CENTER" layoutX="347.0" layoutY="20.0" />
-                  <TextField fx:id="IP" alignment="CENTER" layoutX="127.0" layoutY="20.0" />
-                  <FlowPane layoutY="50.0" prefHeight="79.0" prefWidth="523.0">
+            <MenuBar prefHeight="32.0" prefWidth="600.0">
+               <menus>
+                  <Menu fx:id="Author1" mnemonicParsing="false" onAction="#author1" text="Author Info">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                     </items>
+                  </Menu>
+                  <Menu fx:id="Repo1" mnemonicParsing="false" onAction="#repo1" text="Repository">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                     </items>
+                  </Menu>
+                  <Menu fx:id="Settings1" mnemonicParsing="false" onAction="#settings1" text="Settings">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                     </items>
+                  </Menu>
+                  <Menu fx:id="Leave" mnemonicParsing="false" onAction="#leave" text="Leave">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Action 1" />
+                     </items>
+                  </Menu>
+                  <Menu fx:id="Help" mnemonicParsing="false" onAction="#help1" text="Help">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Action 1" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+            <Text layoutX="42.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Currently Messaging:">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Text>
+            <ScrollPane layoutY="91.0" prefHeight="306.0" prefWidth="600.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="307.0" prefWidth="600.0">
                      <children>
-                        <FlowPane alignment="CENTER" prefHeight="30.0" prefWidth="631.0">
-                           <children>
-                              <Button fx:id="Connect" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onConnectClick" text="Connect" textAlignment="CENTER" />
-                           </children>
-                        </FlowPane>
-                        <Label fx:id="txtConnect" alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="634.0" textFill="RED" />
+                        <ListView editable="true" prefHeight="477.0" prefWidth="585.0" />
                      </children>
-                  </FlowPane>
-                  <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="111.0" prefHeight="20.0" prefWidth="205.0" text="IP" />
-               </children>
-            </AnchorPane>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
          </children>
-      </FlowPane>
-      <FlowPane layoutY="402.0" prefHeight="144.0" prefWidth="611.0">
-         <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="32.0" prefWidth="556.0" text="Try clicking the button below or type Space">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Label>
-            <FlowPane alignment="CENTER" prefHeight="67.0" prefWidth="560.0">
-               <children>
-                  <Button fx:id="msg" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onMsgClick" prefHeight="67.0" prefWidth="144.0" text="Message!">
-                     <font>
-                        <Font name="Times New Roman Italic" size="24.0" />
-                     </font>
-                  </Button>
-               </children>
-            </FlowPane>
-            <Label fx:id="txtMsg" alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="556.0" textAlignment="CENTER" />
-         </children>
-      </FlowPane>
-      <FlowPane alignment="CENTER" layoutX="-16.0" layoutY="522.0" prefHeight="130.0" prefWidth="600.0">
-         <children>
-            <Button fx:id="exit" mnemonicParsing="false" onAction="#onExitClick" prefHeight="86.0" prefWidth="113.0" text="Exit">
-               <font>
-                  <Font size="19.0" />
-               </font>
-            </Button>
-            <Button fx:id="AuthorInfo" mnemonicParsing="false" onAction="#onAuthorInfoClick" prefHeight="86.0" prefWidth="113.0" text="Author Info" textOverrun="CLIP">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Button>
-            <Button fx:id="RepoLoc" mnemonicParsing="false" onAction="#onRepoLocationClick" prefHeight="86.0" prefWidth="113.0" text="Repo Location">
-               <font>
-                  <Font size="12.0" />
-               </font>
-            </Button>
-            <Button fx:id="License" mnemonicParsing="false" onAction="#onLicenseClick" prefHeight="86.0" prefWidth="113.0" text="LICENSE">
-               <font>
-                  <Font size="19.0" />
-               </font>
-            </Button>
-            <Button fx:id="License1" mnemonicParsing="false" onAction="#onLicenseClick" prefHeight="86.0" prefWidth="113.0" text="Settings">
-               <font>
-                  <Font size="19.0" />
-               </font>
-            </Button>
-         </children>
-      </FlowPane>
+      </AnchorPane>
    </children>
 </AnchorPane>

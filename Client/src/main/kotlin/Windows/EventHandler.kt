@@ -3,57 +3,145 @@ package Windows
 import javafx.event.ActionEvent
 import javafx.fxml.FXML
 import javafx.scene.control.Button
-import javafx.scene.control.Label
+import javafx.scene.control.Menu
 import javafx.scene.control.TextField
+import javafx.scene.layout.AnchorPane
+import javafx.scene.text.Text
 
 class EventHandler {
     @FXML
-    private var msg: Button? = null
+    private var Reg_Page: AnchorPane? = null
 
     @FXML
-    private var exit: Button? = null
+    private var Help: Menu? = null
 
     @FXML
-    private var txtMsg: Label?=null
+    private var Settings1: Menu? = null
 
     @FXML
-    private var Port: TextField?=null
+    private var Author1: Menu? = null
 
     @FXML
-    private var Connect: Button? = null
+    private var Leave: Menu? = null
 
     @FXML
-    private var RepoLoc: Button? = null
+    private var Password2nd: TextField? = null
 
     @FXML
-    private var License: Button? = null
+    private var Login_Pwd: TextField? = null
 
     @FXML
-    private var AuthorInfo: Button? = null
+    private var WarnPwdLog: Text? = null
 
     @FXML
-    private var txtConnect: Label? = null
+    private var CallsignReg: TextField? = null
+
     @FXML
-    fun onConnectClick(event: ActionEvent?) {
+    private var New_Account: Button? = null
+
+    @FXML
+    private var Settings: Menu? = null
+
+    @FXML
+    private var Exit: Menu? = null
+
+    @FXML
+    private var Password1st: TextField? = null
+
+    @FXML
+    private var ip: TextField? = null
+
+    @FXML
+    private var Login: Button? = null
+
+    @FXML
+    private var Repo1: Menu? = null
+
+    @FXML
+    private var WarnCallsignLog: Text? = null
+
+    @FXML
+    private var Login_Callsign: TextField? = null
+
+    @FXML
+    private var Login_Page: AnchorPane? = null
+
+    @FXML
+    private var Repo: Menu? = null
+
+    @FXML
+    private var Register: Button? = null
+
+    @FXML
+    private var port: TextField? = null
+
+    @FXML
+    private var Author: Menu? = null
+
+    @FXML
+    private var PwdDoNotMatchReg: Text? = null
+
+    @FXML
+    private var WarnCallsignReg: Text? = null
+
+    @FXML
+    private var Main_Page: AnchorPane? = null
+
+    @FXML
+    private var Switch_Account: Menu? = null
+    @FXML
+    fun gotoregister(event: ActionEvent?) {
     }
 
     @FXML
-    fun onMsgClick(event: ActionEvent?) {
+    fun doLogin(event: ActionEvent?) {
     }
 
     @FXML
-    fun onExitClick(event: ActionEvent?) {
+    fun doReg(event: ActionEvent?) {
     }
 
     @FXML
-    fun onAuthorInfoClick(event: ActionEvent?) {
+    fun author(event: ActionEvent?) {
     }
 
     @FXML
-    fun onRepoLocationClick(event: ActionEvent?) {
+    fun repo(event: ActionEvent?) {
     }
 
     @FXML
-    fun onLicenseClick(event: ActionEvent?) {
+    fun settings(event: ActionEvent?) {
+    }
+
+    @FXML
+    fun switch_account(event: ActionEvent?) {
+    }
+
+    @FXML
+    fun exit(event: ActionEvent?) {
+    }
+
+    @FXML
+    fun connect(event: ActionEvent?) {
+    }
+
+    @FXML
+    fun author1(event: ActionEvent?) {
+    }
+
+    @FXML
+    fun repo1(event: ActionEvent?) {
+    }
+
+    @FXML
+    fun settings1(event: ActionEvent?) {
+    }
+
+    @FXML
+    fun leave(event: ActionEvent?) {
+    }
+
+    @FXML
+    fun help1(event: ActionEvent?) {
     }
 }
