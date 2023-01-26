@@ -146,5 +146,25 @@
             </ScrollPane>
          </children>
       </AnchorPane>
+      <AnchorPane fx:id="Setting_Page" prefHeight="400.0" prefWidth="600.0" visible="false">
+         <children>
+            <Text layoutX="116.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Settings" textAlignment="CENTER" wrappingWidth="368.30029296875">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Text>
+            <Text layoutX="101.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pitch(100~15000)" />
+            <TextField fx:id="Pitch" layoutX="228.0" layoutY="99.0" />
+            <Text layoutX="443.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hz" />
+            <Text layoutX="101.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Background Color" />
+            <ColorPicker fx:id="BackGroudColor" layoutX="243.0" layoutY="156.0" />
+            <Text layoutX="101.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Volume(1~100)" />
+            <TextField fx:id="Volume" layoutX="228.0" layoutY="268.0" />
+            <Button fx:id="ConfirmSetting" layoutX="204.0" layoutY="346.0" mnemonicParsing="false" onAction="#confirmSetting" text="Confirm" />
+            <Button fx:id="CancelSetting" layoutX="295.0" layoutY="346.0" mnemonicParsing="false" onAction="#cancelSetting" text="Cancel" />
+            <Text layoutX="101.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text Color" />
+            <ColorPicker fx:id="TextColor" layoutX="243.0" layoutY="213.0" />
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

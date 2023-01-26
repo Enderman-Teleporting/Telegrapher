@@ -3,6 +3,7 @@ package Windows
 import javafx.event.ActionEvent
 import javafx.fxml.FXML
 import javafx.scene.control.Button
+import javafx.scene.control.ColorPicker
 import javafx.scene.control.Menu
 import javafx.scene.control.TextField
 import javafx.scene.layout.AnchorPane
@@ -25,6 +26,15 @@ class EventHandler {
     private var Leave: Menu? = null
 
     @FXML
+    private var CancelSetting: Button? = null
+
+    @FXML
+    private var BackGroudColor: ColorPicker? = null
+
+    @FXML
+    private var Setting_Page: AnchorPane? = null
+
+    @FXML
     private var Password2nd: TextField? = null
 
     @FXML
@@ -32,6 +42,9 @@ class EventHandler {
 
     @FXML
     private var WarnPwdLog: Text? = null
+
+    @FXML
+    private var TextColor: ColorPicker? = null
 
     @FXML
     private var CallsignReg: TextField? = null
@@ -61,6 +74,9 @@ class EventHandler {
     private var WarnCallsignLog: Text? = null
 
     @FXML
+    private var ConfirmSetting: Button? = null
+
+    @FXML
     private var Login_Callsign: TextField? = null
 
     @FXML
@@ -74,6 +90,12 @@ class EventHandler {
 
     @FXML
     private var port: TextField? = null
+
+    @FXML
+    private var Volume: TextField? = null
+
+    @FXML
+    private var Pitch: TextField? = null
 
     @FXML
     private var Author: Menu? = null
@@ -143,5 +165,13 @@ class EventHandler {
 
     @FXML
     fun help1(event: ActionEvent?) {
+    }
+
+    @FXML
+    fun confirmSetting(event: ActionEvent?) {
+    }
+
+    @FXML
+    fun cancelSetting(event: ActionEvent?) {
     }
 }
