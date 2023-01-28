@@ -115,7 +115,7 @@
             <Text fill="RED" layoutX="98.0" layoutY="342.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$ErrorInfo" visible="false" />
          </children>
       </AnchorPane>
-      <AnchorPane prefHeight="400.0" prefWidth="606.0" visible="false">
+      <AnchorPane fx:id="room" onKeyPressed="#space_pressed" onKeyReleased="#space_released" prefHeight="400.0" prefWidth="606.0" visible="false">
          <children>
             <MenuBar prefHeight="32.0" prefWidth="600.0">
                <menus>
@@ -160,7 +160,7 @@
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="307.0" prefWidth="600.0">
                      <children>
-                        <ListView editable="true" prefHeight="477.0" prefWidth="585.0" />
+                        <ListView fx:id="typerList" editable="true" prefHeight="477.0" prefWidth="585.0" />
                      </children>
                   </AnchorPane>
               </content>

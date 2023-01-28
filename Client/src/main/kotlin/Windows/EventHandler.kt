@@ -2,14 +2,14 @@ package Windows
 
 import javafx.event.ActionEvent
 import javafx.fxml.FXML
-import javafx.scene.control.Button
-import javafx.scene.control.ColorPicker
-import javafx.scene.control.Menu
-import javafx.scene.control.TextField
+import javafx.scene.control.*
 import javafx.scene.layout.AnchorPane
 import javafx.scene.text.Text
 
 class EventHandler {
+    @FXML
+    private var ConfirmIP: Button? = null
+
     @FXML
     private var Reg_Page: AnchorPane? = null
 
@@ -26,13 +26,22 @@ class EventHandler {
     private var Leave: Menu? = null
 
     @FXML
+    private var SwitchIP1: Menu? = null
+
+    @FXML
     private var CancelSetting: Button? = null
+
+    @FXML
+    private var IPError: Text? = null
 
     @FXML
     private var BackGroudColor: ColorPicker? = null
 
     @FXML
     private var Setting_Page: AnchorPane? = null
+
+    @FXML
+    private var typerList: ListView<*>? = null
 
     @FXML
     private var Password2nd: TextField? = null
@@ -62,13 +71,19 @@ class EventHandler {
     private var Password1st: TextField? = null
 
     @FXML
-    private var ip: TextField? = null
+    private var IP: TextField? = null
 
     @FXML
     private var Login: Button? = null
 
     @FXML
+    private var ChooseIP: AnchorPane? = null
+
+    @FXML
     private var Repo1: Menu? = null
+
+    @FXML
+    private var room: AnchorPane? = null
 
     @FXML
     private var WarnCallsignLog: Text? = null
@@ -110,7 +125,14 @@ class EventHandler {
     private var Main_Page: AnchorPane? = null
 
     @FXML
+    private var SwitchIP: Menu? = null
+
+    @FXML
     private var Switch_Account: Menu? = null
+    @FXML
+    fun confirmIP(event: ActionEvent?) {
+    }
+
     @FXML
     fun gotoregister(event: ActionEvent?) {
     }
@@ -144,7 +166,19 @@ class EventHandler {
     }
 
     @FXML
+    fun switchIP(event: ActionEvent?) {
+    }
+
+    @FXML
     fun connect(event: ActionEvent?) {
+    }
+
+    @FXML
+    fun space_pressed(event: ActionEvent?) {
+    }
+
+    @FXML
+    fun space_released(event: ActionEvent?) {
     }
 
     @FXML
@@ -165,6 +199,10 @@ class EventHandler {
 
     @FXML
     fun help1(event: ActionEvent?) {
+    }
+
+    @FXML
+    fun switchIP1(event: ActionEvent?) {
     }
 
     @FXML
