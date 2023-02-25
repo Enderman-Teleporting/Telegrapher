@@ -5,8 +5,6 @@ module com.typer.telegrapher {
     requires org.controlsfx.controls;
     requires org.kordamp.ikonli.javafx;
     requires kotlin.stdlib;
-    requires json.lib;
-
     opens com.typer.telegrapher to javafx.fxml;
     exports com.typer.telegrapher;
     exports Windows;
